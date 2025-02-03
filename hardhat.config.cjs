@@ -44,17 +44,21 @@ const config = {
 
   networks: {
     hardhat: {
-      mining: {
-        auto: true,
-        interval: 0
-      },
-      forking: {
-        url: process.env.BASE_RPC_URL,
-      },
       chainId: 8453,
       gasPrice: 50000000000, // 50 gwei
-      allowBlocksWithSameTimestamp: true
+      allowBlocksWithSameTimestamp: true,
+      forking: process.env.BASE_RPC_URL ? {
+        url: process.env.BASE_RPC_URL,
+        blockNumber: 1234567 // optional, specify a block number to fork from
+      } : undefined,
+      mining: {
+        auto: true,
+        interval: 0,
+      },
+      gas: 2100000, // Ensure this is within the Hardhat network's acceptable range
+      blockGasLimit: 12400000, // Limit the block gas size
     },
+
     devnet: {
       url: "http://0.0.0.0:8545",
       chainId: 8453,
