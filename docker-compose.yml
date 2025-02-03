@@ -1,0 +1,74 @@
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: dockerfiles/nginx.Dockerfile
+    ports:
+      - "80:80"
+    depends_on:
+      - frontend
+      - rpc.raac.io
+      - docs
+
+  docs:
+    build:
+      context: .
+      dockerfile: dockerfiles/docs.protected.Dockerfile
+    ports:
+      - "3010:3010"
+    environment:
+      - NGINX_USER=admin
+      - NGINX_PASS=readytoraac
+
+  rpc.raac.io:
+    build:
+      context: .
+      dockerfile: dockerfiles/core.Dockerfile
+    command: npm run node
+    volumes:
+      - ./:/app
+    environment:
+      - NETWORK=localhost
+      - HOST=0.0.0.0
+    ports:
+      - "8545:8545"
+    # healthcheck:
+    #   test: ["CMD", "curl", "-f", "http://0.0.0.0:8545"]
+    #   interval: 10s
+    #   timeout: 5s
+    #   retries: 5
+
+  bootstrap:
+    build:
+      context: .
+      dockerfile: dockerfiles/core.Dockerfile
+    command: sh -c "sleep 50 && npm run devnet"
+    volumes:
+      - ./:/app
+      - config_data:/app/config
+    environment:
+      - NETWORK=localhost
+    depends_on:
+      - rpc.raac.io
+      # rpc.raac.io:
+        # condition: service_healthy
+
+  frontend:
+    build:
+      context: ../
+      dockerfile: app.raac.io/dockerfiles/app.Dockerfile
+    command: npm run dev
+    depends_on:
+      - bootstrap
+      # rpc.raac.io:
+        # condition: service_healthy
+    ports:
+      - "3000:3000"
+    volumes:
+      - config_data:/app/config
+
+
+
+volumes:
+  node_modules:
+  config_data:

@@ -1,0 +1,24 @@
+{
+    "name": "raac",
+    "version": "1.0.0",
+    "description": "RPC Library for RAAC ",
+    "main": "RPCLibrary.js",
+    "type": "module",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+      "RAAC",
+      "RPC",
+      "blockchain",
+      "DeFi"
+    ],
+    "author": "RAAC",
+    "license": "MIT",
+    "dependencies": {
+      "ethers": "^6.0.0"
+    },
+    "devDependencies": {
+      "eslint": "^8.0.0"
+    }
+  }

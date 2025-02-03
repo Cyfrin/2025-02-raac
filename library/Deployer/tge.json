@@ -1,0 +1,93 @@
+[
+    {
+        "identifier": "TR000",
+        "type": "treasury",
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "50_000_000",
+        "schedules": [
+            {
+                "type": "linear",
+                "start": "2025-01-01",
+                "end": "2025-01-31"
+            }
+        ]
+    },
+    {
+        "identifier": "TE001",
+        "type": "team",
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "50_000_000",
+        "schedules": [
+            {
+                "type": "linear",
+                "start": "2025-01-01",
+                "end": "2025-01-31"
+            }
+        ]
+    },
+    {
+        "identifier": "TE002",
+        "type": "team",
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "50_000_000",
+        "schedules": [
+            {
+                "type": "linear",
+                "start": "2025-01-01",
+                "end": "2025-01-31"
+            }
+        ]
+    },
+    {
+        "identifier": "TE003",
+        "type": "team",
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "50_000_000",
+        "schedules": [
+            {
+                "type": "linear",
+                "start": "2025-01-01",
+                "end": "2025-01-31"
+            }
+        ]
+    },
+    {
+        "identifier": "TE004",
+        "type": "team",
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "50_000_000",
+        "schedules": [
+            {
+                "type": "linear",
+                "start": "2025-01-01",
+                "end": "2025-01-31"
+            }
+        ]
+    },
+    {
+        "identifier": "AD001",
+        "type": "advisor",
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "50_000_000",
+        "schedules": [
+            {
+                "type": "linear",
+                "start": "2025-01-15",
+                "end": "2025-01-31"
+            }
+        ]
+    },
+    {
+        "identifier": "PR001",
+        "type": "private",
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "100_000_000",
+        "schedules": [
+            {
+                "type": "linear",
+                "start": "2025-01-01",
+                "end": "2025-01-31"
+            }
+        ]
+    }
+]

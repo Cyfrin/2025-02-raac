@@ -1,0 +1,167 @@
+/* Light theme customization */
+:root {
+  --theme-color: rgb(235, 114, 187);
+  /* --background: linear-gradient(140deg, rgb(228, 158, 160) 0%, rgb(235, 114, 187) 35%, rgb(109, 116, 216) 100%); */
+  --textColor: #ffffff;
+  --sidebarBackground: rgba(255, 255, 255, 0.05);
+  --contentBackground: rgba(0, 0, 0, 0.1);
+  --borderColor: rgba(255, 255, 255, 0.2);
+  
+  /* Override darklight theme variables */
+  --background-color: transparent;
+  --docsify-example-panels-document-width: 100%;
+  --docsify-example-panels-left-panel-width: 50%;
+  --docsify-example-panels-right-panel-width: 50%;
+}
+
+/* Dark theme customization */
+[data-theme="dark"] {
+  /* --theme-color: rgb(235, 114, 187); */
+  /* --background: linear-gradient(140deg, rgb(228, 158, 160) 0%, rgb(235, 114, 187) 35%, rgb(109, 116, 216) 100%); */
+  --textColor: #ffffff;
+  --sidebarBackground: rgba(0, 0, 0, 0.15);
+  --contentBackground: rgba(0, 0, 0, 0.2);
+  --borderColor: rgba(255, 255, 255, 0.1);
+  
+  /* Override darklight theme variables */
+  --background-color: transparent;
+  --text-color-base: var(--textColor);
+  --text-color-secondary: #b4b4b4;
+  --text-color-tertiary: #888888;
+}
+
+/* Common styles */
+body {
+  background: var(--background) !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Sidebar styling */
+.sidebar {
+  background: var(--sidebarBackground) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-right: 1px solid var(--borderColor) !important;
+}
+
+.sidebar > h1 {
+  font-size: 2rem !important;
+  font-weight: 600 !important;
+  color: var(--textColor) !important;
+}
+
+.sidebar ul li a {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500 !important;
+}
+
+.sidebar ul li.active > a {
+  border-right: 2px solid var(--theme-color) !important;
+  color: var(--theme-color) !important;
+  background: transparent !important;
+}
+
+/* Content styling */
+.content {
+  background: var(--contentBackground) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border-radius: 1rem !important;
+  margin: 2rem !important;
+  padding: 2rem !important;
+  border: 1px solid var(--borderColor) !important;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37) !important;
+  min-height: calc(100vh - 4rem) !important;
+  box-sizing: border-box !important;
+  overflow-y: auto !important;
+  max-width: calc(100% - 4rem) !important; /* Account for margins */
+}
+
+/* Adjust the markdown section to fill the content area */
+.markdown-section {
+  max-width: 90% !important;
+  padding: 1rem !important;
+  color: var(--textColor) !important;
+  margin: 0 auto !important;
+  min-height: 100% !important;
+}
+
+/* Ensure the main container takes full height */
+#app {
+  min-height: 100vh !important;
+  width: 100% !important;
+}
+
+
+/* Code blocks */
+.markdown-section pre,
+.markdown-section code {
+  background: rgba(0, 0, 0, 0.3) !important;
+  border: 1px solid var(--borderColor) !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Headers */
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section h5,
+.markdown-section h6 {
+  color: var(--textColor) !important;
+  font-weight: 600 !important;
+}
+
+/* Search */
+.search {
+  border: none !important;
+  background: var(--sidebarBackground) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.search input {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid var(--borderColor) !important;
+  color: var(--textColor) !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Theme toggle button */
+.dark-theme-toggle {
+  background: var(--sidebarBackground) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  border: 1px solid var(--borderColor) !important;
+  border-radius: 0.5rem !important;
+}
+
+/* Links */
+.markdown-section a {
+  color: var(--theme-color) !important;
+  font-weight: 600 !important;
+}
+
+/* Tables */
+.markdown-section table {
+  background: rgba(0, 0, 0, 0.2) !important;
+  border-radius: 0.5rem !important;
+  border: 1px solid var(--borderColor) !important;
+}
+
+.markdown-section tr:nth-child(2n) {
+  background: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Additional overrides for better visibility */
+.markdown-section p {
+  color: var(--textColor) !important;
+}
+
+.sidebar-toggle {
+  background-color: transparent;
+} 
+
+#docsify-darklight-theme {
+  display: none !important;
+}

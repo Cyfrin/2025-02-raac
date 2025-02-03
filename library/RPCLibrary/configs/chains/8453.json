@@ -1,0 +1,116 @@
+{
+  "chainId": 8453,
+  "name": "Local",
+  "rpcs": [
+    "http://localhost:8545"
+  ],
+  "contracts": {
+    "raachouseprices": {
+      "id": "raachouseprices",
+      "name": "RAAC House Prices",
+      "contract": "0x8e9de7acEc985553fc66C20Ca89037CE6453C245"
+    },
+    "raacminter": {
+      "id": "raacminter",
+      "name": "RAAC Minter",
+      "contract": "0x249dcfF2a207425a9CE5c5Dc2F0360E005a3a6Af"
+    },
+    "raacvault": {
+      "id": "raacvault",
+      "name": "RAAC Vault",
+      "contract": "0xde867db5466F2f9019DAd949AfE2D7B6f93743b5"
+    },
+    "marketcreator": {
+      "id": "marketcreator",
+      "name": "Market Creator",
+      "contract": "0xbDE251165b9b7D33f61C9A37f6Ff07c48B4463b2"
+    },
+    "nftliquidator": {
+      "id": "nftliquidator",
+      "name": "NFT Liquidator",
+      "contract": "0x121535645cA1C4cC0A91Bf388CAfe9083fE9Da4E"
+    },
+    "veraacdistributor": {
+      "id": "veraacdistributor",
+      "name": "VERAAC Distributor",
+      "contract": "0xB11F73Ac64dbd8846D58Ee80276918204287Db7C"
+    },
+    "raacforclosurelane": {
+      "id": "raacforclosurelane",
+      "name": "RAAC Forclosure Lane",
+      "contract": "0xa0Ec5D3Ab72F7F50C3066a3fc222a6210984dC14"
+    },
+    "auctionfactory": {
+      "id": "auctionfactory",
+      "name": "Auction Factory",
+      "contract": "0xC644A84734A7329eE46d3B6704746179d272f990"
+    },
+    "zenofactory": {
+      "id": "zenofactory",
+      "name": "Zeno Factory",
+      "contract": "0xa9eE59A113bCB4B2CC10f802D1efF0Bae1Ab91D2"
+    }
+  },
+  "pools": {
+    "stabilitypool": {
+      "id": "stabilitypool",
+      "name": "Stability Pool",
+      "contract": "0xB822ae2d69609853fE92b3428823B1c54dd2D994"
+    },
+    "liquiditypool": {
+      "id": "liquiditypool",
+      "name": "Liquidity Pool",
+      "contract": "0x25D3739627510ED198811759b836E276953587bb"
+    },
+    "lendingpool": {
+      "id": "lendingpool",
+      "name": "Lending Pool",
+      "contract": "0xFf0b6b68a4E56e8195c16b17A472791ce2F653d4"
+    }
+  },
+  "nfts": {
+    "raacnft": {
+      "id": "raacnft",
+      "name": "RAAC NFT",
+      "contract": "0x7cE019A20C2946598164f4E3CdD1A366924D8F7e"
+    }
+  },
+  "assets": {
+    "eth": {
+      "id": "eth",
+      "name": "ETH",
+      "decimals": 18,
+      "contract": "0x0000000000000000000000000000000000000000"
+    },
+    "crvusd": {
+      "id": "crvusd",
+      "name": "CRVUSD",
+      "decimals": 18,
+      "contract": "0x528607c991142E695bd249Ed0804Ab2D8a2441e1"
+    },
+    "rcrvusd": {
+      "id": "rcrvusd",
+      "name": "CRVUSD",
+      "decimals": 18,
+      "contract": "0x0c5098117FB2751Fa41C2E853787111aD6A21724"
+    },
+    "decrvusd": {
+      "id": "decrvusd",
+      "name": "CRVUSD",
+      "decimals": 18,
+      "contract": "0xad71536F7136ca8Eb86Dbe605cb971D8b5a5156f"
+    },
+    "raactoken": {
+      "id": "raactoken",
+      "name": "RAAC",
+      "decimals": 18,
+      "contract": "0xc240D6DF553573f1Bf5b5a4B1a2D2e6e58a6fc4c"
+    },
+    "veraac": {
+      "id": "veraac",
+      "name": "VERAAC",
+      "decimals": 18,
+      "contract": "0x2FD0603408D9fD16b69326Be04f76a4E70C05157"
+    }
+  }
+}
